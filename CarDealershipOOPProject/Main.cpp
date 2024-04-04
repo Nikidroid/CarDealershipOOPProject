@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-	Car car1("Toyota", "Supra","sport car", 2019, 90000);
+	Car car1("Toyota", "Supra","coupe", 2019, 90000);
 	Car car2("BMW", "M5 F90","sedan", 2017, 100000);
 	Car car3("Daewoo", "Matiz","micro car", 2015, 10000);
 	Car car4("Dodge", "RAM TRX","pickup", 2023, 115000);

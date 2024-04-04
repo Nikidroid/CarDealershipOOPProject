@@ -31,12 +31,17 @@ public:
 		price = p;
 	}
 
+	// Destructor
+	~Car() {
+		
+	}
+
 	string convert() {
 		string s = "";
 		s += brand + " " + model;
 		s += ": body = " + body;
 		s += ", year of issue = " + to_string(year);
-		s += ", price = " + to_string(price) + " dollars.";
+		s += ", price = " + to_string(price) + " dollars.\n";
 		return s;
 	}
 };
