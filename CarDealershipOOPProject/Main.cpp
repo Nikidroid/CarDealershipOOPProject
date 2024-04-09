@@ -1,4 +1,5 @@
 #include "Car.h"
+#include "Manager.h"
 #include <iostream>
 
 using namespace std;
@@ -9,14 +10,17 @@ int main() {
 	Car car3("Daewoo", "Matiz","micro car", 2015, 10000);
 	Car car4("Dodge", "RAM TRX","pickup", 2023, 115000);
 	Car car5("Lamborghini", "Aventador SVG","hyper car", 2019, 550000);
-	Car car6;
+	
+	Car cars[]{car1, car2, car3, car4, car5};
 
-	cout << car1.convert() << endl;
-	cout << car2.convert() << endl;
-	cout << car3.convert() << endl;
-	cout << car4.convert() << endl;
-	cout << car5.convert() << endl;
-	cout << car6.convert() << endl;
+	Manager manager;
+
+	for (int i = 0; i < 5; i++) {
+		cout << cars[i].convert() << endl;
+	}
+
+	cout << "Most expensive car cost " << manager.getMaxPrice(cars, 5) << " dollars." << endl;
+	cout << "Cheapest car cost " << manager.getMinPrice(cars, 5) << " dollars." << endl;
 
 	return 0;
 }
